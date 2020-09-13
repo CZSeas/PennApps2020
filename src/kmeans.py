@@ -1,5 +1,5 @@
 import numpy as np
-from cluster_space import ClusterSpace
+from src.cluster_space import ClusterSpace
 
 
 def kMeans(dataPoints, maxEpochs, numClusters=1, currSpace=ClusterSpace()):

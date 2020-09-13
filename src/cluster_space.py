@@ -1,5 +1,5 @@
 import numpy as np
-from cluster import Cluster
+from src.cluster import Cluster
 
 
 class ClusterSpace:

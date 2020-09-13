@@ -1,10 +1,9 @@
 import numpy as np
 import cv2
 import imutils
-from warp_pts import warp
-from kmeans import kMeans
-from gmeans import gMeans
-from audio import AudioPlayer
+from src.warp_pts import warp
+from src.kmeans import kMeans
+from src.audio import AudioPlayer
 
 tracker = None
 cannyLowerThreshold = 200

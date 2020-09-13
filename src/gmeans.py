@@ -1,8 +1,8 @@
 import numpy as np
-from kmeans import kMeans
-from anderson import anderson
-from cluster_space import ClusterSpace
-from cluster_vis import clusterVis
+from src.kmeans import kMeans
+from src.anderson import anderson
+from src.cluster_space import ClusterSpace
+from src.cluster_vis import clusterVis
 
 
 def gMeans(dataPoints, maxEpochs, numClusters=1, currSpace=ClusterSpace(), sigLevel=0.05, maxClusters=250):
