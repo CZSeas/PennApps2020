@@ -115,6 +115,8 @@ while cap.isOpened():
                 # Plot corners of page
                 for point in warped_pts:
                     cv2.circle(cartesian_plane, (int(point[0]), int(point[1])), 3, (255, 0, 0), 3)
+                cv2.line(cartesian_plane, (page_width//2, 0), (page_width//2, page_height), (0, 255, 0), thickness=3)
+                cv2.line(cartesian_plane, (0, page_height//2), (page_width, page_height//2), (0, 255, 0), thickness=3)
                 audioPlayer.play_sound(pen_pos, page_width, page_height)
                 cv2.circle(cartesian_plane, (int(pen_pos[0]), int(pen_pos[1])), 3, (255, 0, 0), 3)
         else:

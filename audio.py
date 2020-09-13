@@ -1,11 +1,12 @@
 from playsound import playsound
 import numpy as np
+import winsound
 
 sounds = {
-    (0, 0): 'sounds/melody.mp3',
-    (0, 1): 'sounds/high.mp3',
-    (1, 0): 'sounds/bassline.mp3',
-    (1, 1): 'sounds/lick.mp3'
+    (0, 0): 'sounds/melody.wav',
+    (0, 1): 'sounds/high.wav',
+    (1, 0): 'sounds/bassline.wav',
+    (1, 1): 'sounds/lick.wav'
 }
 
 
@@ -26,6 +27,8 @@ class AudioPlayer:
         if y != self.playing_y:
             self.playing_y = y
         if not self.playing[y][x]:
-            self.playing[y][x] = True
-            playsound(sounds[(y, x)], block=False)
+            self.playing = np.zeros((2, 2))
+            self.playing[y][x] = 1
+            # winsound.PlaySound(None, winsound.SND_PURGE)
+            winsound.PlaySound(sounds[(y, x)], winsound.SND_ASYNC)
 
