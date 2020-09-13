@@ -26,7 +26,7 @@ class AudioPlayer:
             self.playing_x = x
         if y != self.playing_y:
             self.playing_y = y
-        if not self.playing[y][x]:
+        if 1 >= y >= 0 and 1 >= x >= 0 and not self.playing[y][x]:
             self.playing = np.zeros((2, 2))
             self.playing[y][x] = 1
             # winsound.PlaySound(None, winsound.SND_PURGE)
